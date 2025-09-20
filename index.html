@@ -2,44 +2,75 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rein Solis - Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
-  <header>
-    <h1>Rein Solis</h1>
+  <!-- Header -->
+  <header id="header">
+    <h2 id="header-title">Rein Solis</h2>
     <nav>
-      <a href="index.html">Home</a> |
-      <a href="contact.html">Contact</a>
+      <ul id="header-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="mailto:solisre.456.stud@cdd.edu.ph">Contact</a></li>
+      </ul>
     </nav>
   </header>
+
+  <!-- Main -->
   <main>
-    <!-- Page-specific content here -->
-    <section>
-      <h2>Welcome</h2>
-      <p>An IT student at Universidad De Dagupan.</p>
-      <figure>
-        <img src="./assets/97514186.jpg"
-          alt="An image of Rein Solis. A young man smiling at a restaurant, wearing a navy blue, yellow, and white striped collared shirt. The background shows warm lighting, tables, and people dining.">
-        <figcaption>Profile photo</figcaption>
-      </figure>
+    <section id="about">
+      <h1>About Me</h1>
+      <div id="about-content">
+        <figure>
+          <img id="about-img" src="./assets/profile_img.jpg" alt="Photo of Rein Solis" />
+        </figure>
+        <div>
+          <p>Hello! I'm <span id="name-emphasis">Rein Solis</span>, an aspiring web developer who values clean code,
+            accessibility, and performance.</p>
+          <p>This page demonstrates HTML + CSS best practices.</p>
+        </div>
+      </div>
     </section>
 
-    <h3>Projects</h3>
-    <section>
-      <h4>UdD Testimonials Webpage</h4>
-      <a href="https://reinx24.github.io/UdD-enrollment-testimonials-ad/" target="_blank">Link to webpage</a>
-    </section>
-
-    <section>
-      <h4>Saphira Lopez Portfolio Webpage</h4>
-      <a href="https://sjlopez-portfolio.web.app/" target="_blank">Link to webpage</a>
+    <section id="projects">
+      <h1>Projects</h1>
+      <div id="projects-content">
+        <div class="card">
+          <h4>UdD Testimonials Webpage</h4>
+          <p>A webpage showcasing testimonials of past students from Universidad De Dagupan. Learned responsive styling
+            with Flexbox.</p>
+          <a class="card-link" href="https://reinx24.github.io/UdD-enrollment-testimonials-ad/" target="_blank">View</a>
+        </div>
+        <div class="card">
+          <h4>Saphira Lopez Portfolio</h4>
+          <p>Portfolio website for freelancer Saphira Lopez. Learned scroll animations with JavaScript and CSS.</p>
+          <a class="card-link" href="https://sjlopez-portfolio.web.app/" target="_blank">View</a>
+        </div>
+        <div class="card">
+          <h4>Valorant Agent Randomizer</h4>
+          <p>A randomizer app for Valorant agents. Practiced DOM manipulation and JavaScript logic.</p>
+          <a class="card-link" href="https://reinx24.github.io/Valorant-Random-Agent-Generator/"
+            target="_blank">View</a>
+        </div>
+      </div>
     </section>
   </main>
-  <footer>
-    <small>© 2025 Rein Solis</small>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <h3>© 2025 · <a id="footer-link" href="mailto:solisre.456.stud@cdd.edu.ph">solisre.456.stud@cdd.edu.ph</a></h3>
   </footer>
 </body>
 

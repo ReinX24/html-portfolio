@@ -1,0 +1,174 @@
+/* CSS variables for colors */
+:root {
+  --color-bg: #fefefe;
+  --color-surface: #f6f7f9;
+  --color-border: #fbfbfb;
+
+  --color-primary: #3b82f6;
+  --color-primary-dark: #1e3a8a;
+
+  --color-text: #000; /* fallback body text */
+}
+
+/* CSS reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+/* Header */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 12rem;
+  border-bottom: 2px solid var(--color-border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-bg);
+  z-index: 1000;
+}
+
+#header-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+#header-list a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.2s ease;
+}
+
+#header-list a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 12rem;
+}
+
+#about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+#name-emphasis {
+  font-weight: bold;
+}
+
+#projects-content {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Card */
+.card {
+  background: var(--color-surface);
+  padding: 1rem;
+  border-radius: 1rem;
+  flex: 1;
+  min-width: 260px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.card-link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Footer */
+#footer {
+  padding: 1rem 12rem;
+  border-top: 2px solid var(--color-border);
+}
+
+#footer-link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+#footer-link:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  #header,
+  section,
+  #footer {
+    padding: 1rem 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  #about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #projects-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  #header-title {
+    font-size: 1.2rem;
+  }
+}
